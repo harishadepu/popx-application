@@ -44,7 +44,7 @@ const LoginPage = () => {
     <div className='min-h-screen flex justify-center items-center'>
       <form
         onSubmit={handleSubmit}
-        className='flex flex-col justify-center gap-4 w-[310px] h-150 shadow-lg py-4 px-3 md:w-[360px]'
+        className='flex flex-col justify-center gap-4 w-[310px] h-150 border border-gray-300 shadow-lg py-4 px-3 md:w-[360px]'
       >
         <h1 className='text-3xl font-bold text-gray-700'>
           Sign in to your <br /> PopX account

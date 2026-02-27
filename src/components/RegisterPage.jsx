@@ -33,9 +33,9 @@ const RegisterPage = () => {
 
     // Save to localStorage
     localStorage.setItem('user', JSON.stringify(submitData))
-    navigate('/profile')
     console.log('Saved:', submitData)
-    alert('Account data saved to localStorage!')
+    alert('Successfully Registered!')
+    navigate('/login')
   } catch (error) {
     console.error('Error saving to localStorage:', error)
     alert('Something went wrong while saving your data.')
@@ -46,7 +46,7 @@ const RegisterPage = () => {
     <div className='min-h-screen flex justify-center items-center'>
       <form 
         onSubmit={handleSubmit} 
-        className='flex flex-col w-[310px] h-150 shadow-lg py-4 px-3 justify-between md:w-[360px]'
+        className='flex flex-col w-[310px] h-150 border border-gray-300 shadow-lg py-4 px-3 justify-between md:w-[360px]'
       >
         <div className='flex flex-col justify-center items-right gap-4'>
           <h1 className='text-3xl font-bold text-gray-700'>
@@ -133,7 +133,7 @@ const RegisterPage = () => {
               <input 
                 id='yes' 
                 type="radio" 
-                name="agency" 
+                name="choice" 
                 value="Yes" 
                 checked={submitData.choice === 'Yes'} 
                 onChange={handleChange} 
@@ -144,7 +144,7 @@ const RegisterPage = () => {
               <input 
                 id='no' 
                 type="radio" 
-                name="agency" 
+                name="choice" 
                 value="No" 
                 checked={submitData.choice === 'No'} 
                 onChange={handleChange} 
